@@ -7,11 +7,13 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.core.view.isInvisible
 import androidx.core.view.isVisible
+import androidx.navigation.fragment.findNavController
 import androidx.viewpager2.widget.ViewPager2
 import com.example.noteapp.Adapter.OnBoardPageAdapter
 import com.example.noteapp.R
 import com.example.noteapp.databinding.FragmentOnBoardingBinding
 import com.example.noteapp.models.OnBoardModel
+import com.example.noteapp.utils.PreferenceHelper
 
 
 class OnBoardingFragment : Fragment() {
@@ -64,10 +66,14 @@ class OnBoardingFragment : Fragment() {
                 super.onPageSelected(position)
                 binding.buttonStart.isVisible = position == 2
                 binding.skippBtn.isInvisible = position == 2
-
-
             }
         })
+        val shared = PreferenceHelper()
+        shared.init(requireContext())
+        binding.buttonStart.setOnClickListener{
+            findNavController().navigate(R.id.action_onBoardingFragment_to_noteFragment)
+            shared.isOnBoard = true
+        }
     }
 
 
