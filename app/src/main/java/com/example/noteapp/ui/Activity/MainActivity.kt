@@ -1,4 +1,4 @@
-package com.example.noteapp.Activity
+package com.example.noteapp.ui.Activity
 
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
@@ -8,7 +8,7 @@ import androidx.core.view.WindowInsetsCompat
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
 import com.example.noteapp.R
-import com.example.noteapp.utils.PreferenceHelper
+import com.example.noteapp.ui.utils.PreferenceHelper
 
 class MainActivity : AppCompatActivity() {
     private lateinit var navController: NavController

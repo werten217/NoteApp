@@ -1,4 +1,4 @@
-package com.example.noteapp.utils
+package com.example.noteapp.ui.utils
 
 import android.content.Context
 import android.content.SharedPreferences

@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@color/black"
     android:orientation="vertical"
-    tools:context=".fragment.OnBoardingFragment">
+    tools:context=".ui.fragment.OnBoardingFragment">
 
     <TextView
         android:id="@+id/skipp_btn"

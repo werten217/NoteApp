@@ -1,4 +1,4 @@
-package com.example.noteapp.fragment
+package com.example.noteapp.ui.fragment
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -9,11 +9,11 @@ import androidx.core.view.isInvisible
 import androidx.core.view.isVisible
 import androidx.navigation.fragment.findNavController
 import androidx.viewpager2.widget.ViewPager2
-import com.example.noteapp.Adapter.OnBoardPageAdapter
+import com.example.noteapp.ui.Adapter.OnBoardPageAdapter
 import com.example.noteapp.R
 import com.example.noteapp.databinding.FragmentOnBoardingBinding
-import com.example.noteapp.models.OnBoardModel
-import com.example.noteapp.utils.PreferenceHelper
+import com.example.noteapp.ui.models.OnBoardModel
+import com.example.noteapp.ui.utils.PreferenceHelper
 
 
 class OnBoardingFragment : Fragment() {

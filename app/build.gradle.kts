@@ -1,6 +1,7 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
+    id ("com.google.devtools.ksp")
 }
 
 android {
@@ -58,4 +59,8 @@ dependencies {
         implementation("androidx.navigation:navigation-fragment:$nav_version")
         implementation("androidx.navigation:navigation-ui:$nav_version")
     implementation ("pl.droidsonroids.gif:android-gif-drawable:1.2.27")
+    //room gradle
+        val room_version = "2.6.1"
+    implementation("androidx.room:room-ktx:$room_version")
+    ksp("androidx.room:room-compiler:$room_version")
 }

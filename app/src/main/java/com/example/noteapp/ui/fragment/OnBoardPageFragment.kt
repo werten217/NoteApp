@@ -1,4 +1,4 @@
-package com.example.noteapp.fragment
+package com.example.noteapp.ui.fragment
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -9,7 +9,7 @@ import com.bumptech.glide.Glide
 import com.bumptech.glide.load.resource.bitmap.RoundedCorners
 import com.example.noteapp.R
 import com.example.noteapp.databinding.FragmentOnBoardPageBinding
-import com.example.noteapp.models.OnBoardModel
+import com.example.noteapp.ui.models.OnBoardModel
 
 
 class OnBoardPageFragment : Fragment() {

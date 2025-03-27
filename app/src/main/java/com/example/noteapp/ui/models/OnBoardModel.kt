@@ -1,4 +1,4 @@
-package com.example.noteapp.models
+package com.example.noteapp.ui.models
 
 import java.io.Serializable
 
