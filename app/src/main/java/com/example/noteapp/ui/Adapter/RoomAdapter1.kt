@@ -7,16 +7,29 @@ import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.example.noteapp.data.models.NoteModel
 import com.example.noteapp.databinding.ItemNoteBinding
+import com.example.noteapp.ui.inter.OnClickItem
 
-class RoomAdapter1 : ListAdapter<NoteModel, RoomAdapter1.ViewHolder>(DiffCallback()) {
+class RoomAdapter1(
+    private val onLongClick: OnClickItem,
+    private val onClick: OnClickItem
+
+) : ListAdapter<NoteModel, RoomAdapter1.ViewHolder>(DiffCallback()) {
     class ViewHolder(private val binding: ItemNoteBinding): RecyclerView.ViewHolder(binding.root) {
       fun bind(item: NoteModel) {
+
           binding.txtTitle.text = item.title
           binding.txtDescription.text = item.description
 
     }}
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.bind(getItem(position))
+        holder.itemView.setOnLongClickListener {
+            onLongClick.onLongClick(getItem(position))
+            true
+        }
+        holder.itemView.setOnClickListener {
+            onClick.onClick(getItem(position))
+        }
     }
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         return ViewHolder(
