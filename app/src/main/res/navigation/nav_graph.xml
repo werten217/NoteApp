@@ -13,6 +13,9 @@
         <action
             android:id="@+id/action_onBoardingFragment_to_noteFragment"
             app:destination="@id/noteFragment" />
+        <action
+            android:id="@+id/action_onBoardingFragment_to_authFragment"
+            app:destination="@id/authFragment" />
     </fragment>
     <fragment
         android:id="@+id/noteFragment"
@@ -32,4 +35,9 @@
             android:name="noteId"
             app:argType="integer" />
     </fragment>
+    <fragment
+        android:id="@+id/authFragment"
+        android:name="com.example.noteapp.ui.fragment.AuthFragment"
+        android:label="fragment_auth"
+        tools:layout="@layout/fragment_auth" />
 </navigation>

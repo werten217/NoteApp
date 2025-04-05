@@ -74,7 +74,11 @@ class OnBoardingFragment : Fragment() {
             findNavController().navigate(R.id.action_onBoardingFragment_to_noteFragment)
             shared.isOnBoard = true
         }
+        binding.btnAuthGoogle.setOnClickListener{
+            findNavController().navigate(R.id.action_onBoardingFragment_to_authFragment)
+        }
     }
+
 
 
 }
