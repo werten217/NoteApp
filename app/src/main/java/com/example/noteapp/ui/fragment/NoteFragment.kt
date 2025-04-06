@@ -56,6 +56,9 @@ class NoteFragment : Fragment(), OnClickItem {
         btnAction.setOnClickListener {
             findNavController().navigate(R.id.action_noteFragment_to_detailFragment)
         }
+        imBtn.setOnClickListener{
+            findNavController().navigate(R.id.action_noteFragment_to_storeFragment)
+        }
 
         dashboard.setOnClickListener {
             isGridLayout = !isGridLayout

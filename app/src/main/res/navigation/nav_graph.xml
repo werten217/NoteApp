@@ -25,6 +25,9 @@
         <action
             android:id="@+id/action_noteFragment_to_detailFragment"
             app:destination="@id/detailFragment" />
+        <action
+            android:id="@+id/action_noteFragment_to_storeFragment"
+            app:destination="@id/storeFragment" />
     </fragment>
     <fragment
         android:id="@+id/detailFragment"
@@ -40,4 +43,9 @@
         android:name="com.example.noteapp.ui.fragment.AuthFragment"
         android:label="fragment_auth"
         tools:layout="@layout/fragment_auth" />
+    <fragment
+        android:id="@+id/storeFragment"
+        android:name="com.example.noteapp.ui.fragment.StoreFragment"
+        android:label="fragment_store"
+        tools:layout="@layout/fragment_store" />
 </navigation>
